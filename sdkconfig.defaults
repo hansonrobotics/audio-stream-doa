@@ -413,9 +413,9 @@ CONFIG_STA_WIFI_PASS=""
 # end of WiFi STA Configuration
 
 #
-# TCP Client Configuration
+# TCP Server Configuration
 #
-CONFIG_TCP_CLIENT_IP=""
+CONFIG_TCP_SERVER_IP=""
 # end of TCP Client Configuration
 
 #

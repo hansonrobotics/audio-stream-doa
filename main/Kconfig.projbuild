@@ -14,8 +14,8 @@ endmenu
 
 menu "TCP Client Configuration"
 
-    config TCP_CLIENT_IP
-        string "TCP Client IP"
+    config TCP_SERVER_IP
+        string "TCP SERVER IP"
         help
             IP Address of TCP server where data will be sent
     
