@@ -1,6 +1,6 @@
 # Audio Stream Direction of Arrival (DOA)
 
-This repository is designed to stream raw audio data, Voice Activity Detection (VAD) status, and decibel (dB) volume levels from an ESP32S3 microphone to a TCP socket.
+This repository is designed to stream raw audio data, Voice Activity Detection (VAD) status, and decibel (dB) volume levels from 2 microphones on ESP32S3 to a TCP socket.
 
 ## Prerequisites
 
@@ -33,3 +33,6 @@ Set `CONFIG_STA_WIFI_SSID`, `CONFIG_STA_WIFI_PASS`, and `CONFIG_TCP_SERVER_IP` i
 
 - Located on the PC side.
 - Sets up a TCP socket to receive and print incoming VAD and volume data.
+
+## Pin Configurations
+![ESP32S3 -> INMP441 pin configurations](/docs/img/pin_conf.jpeg "ESP32S3 -> INMP441 pin configurations")
