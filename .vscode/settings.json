@@ -1,0 +1,36 @@
+{
+    "C_Cpp.intelliSenseEngine": "default",
+    "idf.adapterTargetName": "esp32s3",
+    "idf.customExtraPaths": "/home/hansonrobotics/esp/esp-tools-v5/tools/xtensa-esp-elf-gdb/11.2_20220823/xtensa-esp-elf-gdb/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/riscv32-esp-elf-gdb/11.2_20220823/riscv32-esp-elf-gdb/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/xtensa-esp32s2-elf/esp-2022r1-11.2.0/xtensa-esp32s2-elf/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/xtensa-esp32s3-elf/esp-2022r1-11.2.0/xtensa-esp32s3-elf/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/riscv32-esp-elf/esp-2022r1-11.2.0/riscv32-esp-elf/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/esp32ulp-elf/2.35_20220830/esp32ulp-elf/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/openocd-esp32/v0.12.0-esp32-20230419/openocd-esp32/bin:/home/hansonrobotics/esp/esp-tools-v5/tools/esp-rom-elfs/20220823",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "/home/hansonrobotics/esp/esp-tools-v5/tools/openocd-esp32/v0.12.0-esp32-20230419/openocd-esp32/share/openocd/scripts",
+        "ESP_ROM_ELF_DIR": "/home/hansonrobotics/esp/esp-tools-v5/tools/esp-rom-elfs/20220823/"
+    },
+    "idf.espIdfPath": "/home/hansonrobotics/esp/esp-idf-5.0",
+    "idf.espAdfPath": "/home/hansonrobotics/esp/esp-adf-2.6",
+    "idf.openOcdConfigs": [
+        "interface/ftdi/esp32_devkitj_v1.cfg",
+        "target/esp32.cfg"
+    ],
+    "idf.port": "/dev/ttyACM0",
+    "idf.pythonBinPath": "/home/hansonrobotics/esp/esp-tools-v5/python_env/idf5.0_py3.8_env/bin/python",
+    "idf.toolsPath": "/home/hansonrobotics/esp/esp-tools-v5",
+    "files.associations": {
+        "sdmmc_host.h": "c",
+        "model_path.h": "c",
+        "ringbuf.h": "c",
+        "esp_mn_models.h": "c",
+        "esp_mn_iface.h": "c",
+        "esp_afe_sr_models.h": "c",
+        "sockets.h": "c",
+        "socket.h": "c",
+        "esp_log.h": "c",
+        "errno.h": "c",
+        "esp_system.h": "c",
+        "err.h": "c",
+        "sys.h": "c",
+        "sdmmc_cmd.h": "c",
+        "tcp_client.h": "c"
+    },
+    "idf.flashType": "UART"
+}

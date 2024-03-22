@@ -1,0 +1,22 @@
+menu "WiFi STA Configuration"
+
+config STA_WIFI_SSID
+    string "WiFi SSID"
+    help
+        SSID (network name) for the WiFi station.
+
+config STA_WIFI_PASS
+    string "WiFi Password"
+    help
+        Password for the WiFi station.
+    
+endmenu
+
+menu "TCP Client Configuration"
+
+    config TCP_CLIENT_IP
+        string "TCP Client IP"
+        help
+            IP Address of TCP server where data will be sent
+    
+endmenu
