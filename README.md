@@ -1,32 +1,35 @@
-# _Sample project_
+# Audio Stream Direction of Arrival (DOA)
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+This repository is designed to stream raw audio data, Voice Activity Detection (VAD) status, and decibel (dB) volume levels from an ESP32S3 microphone to a TCP socket.
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+## Prerequisites
 
+- ESP-IDF version 5.0.0
 
+## Configuration
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+Set `CONFIG_STA_WIFI_SSID`, `CONFIG_STA_WIFI_PASS`, and `CONFIG_TCP_SERVER_IP` in `sdkconfig.defaults` to connect the device to your network and define the TCP server's IP address.
 
-## Example folder contents
+## File Descriptions
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+### `main.c`
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+- Sends VAD and dB volume data for both microphones to port 5000.
+- Streams `mic_left` data to port 5000.
+- Streams `mic_right` data to port 5001.
 
-Below is short explanation of remaining files in the project folder.
+### `main_vad_vol.c`
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+- Streams only VAD and dB volume data to port 5000.
+
+### `tcp_server_mult.py`
+
+- Located on the PC side.
+- Sets up TCP sockets to receive the audio, VAD, and volume data.
+- Records the audio data into files.
+- Outputs volume and VAD data to the console.
+
+### `tcp_server.py`
+
+- Located on the PC side.
+- Sets up a TCP socket to receive and print incoming VAD and volume data.
